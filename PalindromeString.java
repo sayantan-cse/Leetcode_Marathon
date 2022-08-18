@@ -1,35 +1,35 @@
 import com.sun.jdi.event.EventSet;
 
 // Java program to check whether a string is a Palindrome
-//Naive approach
+// Naive approach
 
-// class PalindromeString{
+class PalindromeString{
 
-//   public static boolean isPS(String str){
+  public static boolean isPS(String str){
 
-//     //initialising  reverse string with empty string
-//     String reverse = "";
+    //initialising  reverse string with empty string
+    String reverse = "";
 
-//     for (int i =str.length()-1 ; i >=0 ;i--){
-//       reverse= reverse + str.charAt(i);
-//       }
-//     if (str.equals(reverse)){
-//       return true;
-//     }
-//     return false;
-//   }
-// }
+    for (int i =str.length()-1 ; i >=0 ;i--){
+      reverse= reverse + str.charAt(i);
+      }
+    if (str.equals(reverse)){
+      return true;
+    }
+    return false;
+  }
+}
 
-// class Main{
-//   public static void main(String[] args){
-//     String teststr = "sayantancse";
-//     boolean isPalindrome=PalindromeString.isPS(teststr);
-//     System.out.println(isPalindrome);
-//   }
-// }
+class Main{
+  public static void main(String[] args){
+    String teststr = "sayantancse";
+    boolean isPalindrome=PalindromeString.isPS(teststr);
+    System.out.println(isPalindrome);
+  }
+}
 
-//recursive approach
-//two pointers
+// recursive approach
+// two pointers
 
 class PalindromeStringRecursive{
   public static boolean isPalindromeRecursive(int start, int end,String str){ 

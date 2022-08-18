@@ -1,0 +1,53 @@
+//insertion sort
+//comparing to predecessor
+
+class InsertionSort{
+
+  public  void IS(int arr[]){
+    int n = arr.length;
+    // outer loop for pass
+    for (int i=0 ; i <n-1 ; i++){
+      //current element
+      int key = arr[i];
+
+      //another pointer pointing to end
+      int j = n-i-1;
+
+      //traversing from end to front
+      
+      while(j>=0 && arr[j]>key){
+        // key is smaller than successor
+        //move a position ahead
+        //to make room for swapped element
+        arr[j+1]=arr[j];
+        j--;
+        
+      }
+      arr[j+1]=key;
+      
+    }
+  }
+   void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n; ++i)
+            System.out.print(arr[i] + " ");
+  
+        System.out.println();
+    }
+}
+  
+   
+
+class Main{
+    public static void main(String args[])
+    {
+        int arr[] = { 12, 11, 13, 5, 6 };
+  
+        InsertionSort ob = new InsertionSort();
+        ob.IS(arr);
+  
+        ob.printArray(arr);
+    }
+} 
+
